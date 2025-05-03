@@ -1,0 +1,12 @@
+Group name: Data Mining Enjoyers
+Participants:
+1. Wojciech Nagórka - publication
+
+2. Vasyl Korzavatykh - code
+
+3. Kuba Czech - poster
+
+4. Andrii Chmutov - code
+
+Code Repository:
+https://github.com/vasia-korz/recommendation-system
