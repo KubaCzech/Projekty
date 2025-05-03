@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1700551912 source:c:\users\kuba\desktop\race - project\main.cpp
+	<iostream>
+	<cmath>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	<algorithm>
+	"Vehicle.hpp"
+	"F1_car.hpp"
+	"FormulaECar.hpp"
+	"Hypercar.hpp"
+	"ScuderiaFerrari.hpp"
+	"MercedesAMGPetronas.hpp"
+	"RedBullRacing.hpp"
+	"Bugatti.hpp"
+	"Lamborghini.hpp"
+	"Jaguar.hpp"
+	"Porsche.hpp"
+	"race.hpp"
+
+1700550415 c:\users\kuba\desktop\race - project\vehicle.hpp
+	<iostream>
+	<cmath>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	<algorithm>
+
+1700550860 c:\users\kuba\desktop\race - project\f1_car.hpp
+	"Vehicle.hpp"
+
+1700522660 c:\users\kuba\desktop\race - project\formulaecar.hpp
+	"Vehicle.hpp"
+
+1700522674 c:\users\kuba\desktop\race - project\hypercar.hpp
+	"Vehicle.hpp"
+
+1700551425 c:\users\kuba\desktop\race - project\scuderiaferrari.hpp
+	"F1_car.hpp"
+
+1700551486 c:\users\kuba\desktop\race - project\mercedesamgpetronas.hpp
+	"F1_car.hpp"
+
+1700551434 c:\users\kuba\desktop\race - project\redbullracing.hpp
+	"F1_car.hpp"
+
+1700522608 c:\users\kuba\desktop\race - project\bugatti.hpp
+	"Hypercar.hpp"
+
+1700515019 c:\users\kuba\desktop\race - project\lamborghini.hpp
+	"Hypercar.hpp"
+
+1700514998 c:\users\kuba\desktop\race - project\jaguar.hpp
+	"FormulaECar.hpp"
+
+1700515040 c:\users\kuba\desktop\race - project\porsche.hpp
+	"FormulaECar.hpp"
+
+1700554380 c:\users\kuba\desktop\race - project\race.hpp
+	"ScuderiaFerrari.hpp"
+	"RedBullRacing.hpp"
+	"MercedesAMGPetronas.hpp"
+	"Lamborghini.hpp"
+	"Bugatti.hpp"
+	"Jaguar.hpp"
+	"Porsche.hpp"
+	<vector>
+	"race.cpp"
+
+1700554412 c:\users\kuba\desktop\race - project\race.cpp
+	"race.hpp"
+	"ScuderiaFerrari.hpp"
+	"RedBullRacing.hpp"
+	"MercedesAMGPetronas.hpp"
+	"Lamborghini.hpp"
+	"Bugatti.hpp"
+	"Porsche.hpp"
+	"Jaguar.hpp"
+

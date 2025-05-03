@@ -1,0 +1,77 @@
+(define
+	(domain world-of-blocks)
+	(:requirements :adl)
+	(:predicates
+		(on-top ?x ?y)
+		(on-floor ?x)
+		(picked-up ?x)
+		(clear ?x)
+	)
+	; ?x - block to be picked up from floor
+	(:action pickup-from-floor
+		:parameters (?x)
+		:precondition
+		;?x is on the floor AND nothing on top of ?x AND no other block ?z is picked up
+		(and
+		    (on-floor ?x)
+		    (clear ?x)
+			(not (exists (?z) (picked-up ?z)))
+		)
+		:effect
+		;?x is not on the floor AND ?x is picked up
+		(and
+			(not (on-floor ?x))
+			(picked-up ?x)
+		)
+	)
+	;?x - block to be put down on the floor
+	(:action putdown-to-floor
+		:parameters (?x)
+		:precondition
+		;?x must be picked up to be put down
+		(picked-up ?x)
+		:effect
+		;?x is not picked up AND ?x is on the floor
+		(and
+			(not (picked-up ?x))
+			(on-floor ?x)
+		)
+	)
+	; ?x - block to be picked-up, ?y - block under block ?x
+	(:action pickup-from-block
+		:parameters (?x, ?y)
+		:precondition
+		;?x != ?y AND ?x on top of ?y AND nothing on top of ?x AND no other block picked-up
+		(and	
+			(not(= ?y ?x))
+			(on-top ?x ?y)
+			(clear ?x)
+			(not (exists (?z) (picked-up ?z)))
+		)
+		:effect
+		;?x is picked up AND nothing on top of ?x AND ?x not on top of ?y
+		(and
+			(picked-up ?x)
+			(clear ?y)
+			(not (on-top?x ?y))
+		)
+	)
+	;?y - block to be put down, ?x - block on top of which ?y is placed
+	(:action putdown-to-block
+		:parameters (?x, ?y)
+		:precondition
+		;?x != ?y AND ?y is not picked up AND nothing on top of ?x
+		(and
+		    (not(= ?y ?x))
+			(picked-up ?y)
+			(clear ?x)
+		)
+		:effect
+		;?y is not picked up AND something on top of ?x AND ?y on top of ?x
+		(and
+			(not (picked-up ?y))
+			(not (clear ?x))
+			(on-top ?y ?x)
+		)
+	)
+)

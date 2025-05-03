@@ -1,0 +1,31 @@
+(define 
+    (problem building-a-tower)
+	(:domain world-of-blocks)
+	(:objects a b c d e)
+	;initialization -> five blocks on floor (on-floor) nothing on top (clear)
+	(:init
+		(on-floor a)
+		(on-floor b)
+		(on-floor c)
+		(on-floor d)
+		(on-floor e)
+		(clear a)
+		(clear b)
+		(clear c)
+		(clear d)
+		(clear e)
+	)
+	;goal to achieve -> is there configuration that in the same time either (no block g is picked up or on the floor) or f == g
+	;and f is on floor and 
+	(:goal
+		(exists (?f) (and
+			(forall (?g) (or
+			    (and (not (on-floor ?g)) (not (picked-up ?g)))
+			    (= ?f ?g)
+			    )
+	        )
+	        (on-floor ?f)
+		)
+		)
+	)
+)

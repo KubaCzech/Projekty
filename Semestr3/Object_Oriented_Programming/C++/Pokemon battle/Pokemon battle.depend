@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1698686056 source:c:\users\kuba\desktop\pokemon battle\main.cpp
+	<iostream>
+	<thread>
+
+1700086733 source:c:\users\kuba\desktop\studia\pokemon battle\main.cpp
+	<iostream>
+	<thread>
+
