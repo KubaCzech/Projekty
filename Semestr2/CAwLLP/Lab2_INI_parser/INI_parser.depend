@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1681729019 source:c:\users\kuba\desktop\ini_parser\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<ctype.h>
+
+1683032569 source:c:\users\kuba\desktop\studia - do zgrania\ini_parser\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<ctype.h>
+
