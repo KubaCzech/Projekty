@@ -1,0 +1,10 @@
+criterion,type,k
+Rooms,gain,0.1
+Price,cost,0.3
+Distance,cost,0.05
+Bedroom2,gain,0.1
+Bathroom,gain,0.05
+Car,gain,0.05
+Landsize,gain,0.1
+BuildingArea,gain,0.15
+YearBuilt,gain,0.1

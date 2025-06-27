@@ -1,0 +1,6 @@
+Criterion,Rooms,Price,Distance,Bedroom2,Bathroom,Car,Landsize,BuildingArea,YearBuilt
+b1,1,30000,5.0,1,1,1,15,10,20
+b2,1,25000,4.0,1,1,1,20,10,10
+b3,1,25000,3.0,1,1,1,20,15,10
+b4,2,40000,3.0,2,1,2,30,15,10
+b5,2,50000,3.0,2,2,2,30,20,10
