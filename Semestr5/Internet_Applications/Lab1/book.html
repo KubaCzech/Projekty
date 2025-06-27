@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>book title and author</title>
+    <meta name="description" content="book description, internet applications, exercise, html, css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css" title="Stylesheet">
+</head>
+<body>
+    <h1>book title</h1>
+    <h2>book author</h2>
+    <table>
+        <tr>
+            <td>
+                <img id="cover" src="pan_tadeusz.jpeg" alt="front cover">
+            </td>
+            <td>
+                <ul>
+                <li><strong>publisher</strong>: <span class="underlined">Wydawnictwo Złota Gąska</span> </li>
+                <li><strong>numer of pages</strong>: 500 </li>
+                <li><strong>cover</strong>: hard</li>
+                <li><strong>price</strong>: <span id="price">50.00 PLN</span></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">description
+                <p id="par1">Do rodzinnego domu przyjeżdża ze szkół w Wilnie na wakacje młody Tadeusz. Okazuje się, że Soplicowo, majątek jego opiekuna Sędziego Soplicy, 
+                    jest pełne gości, którzy zjechali tu, aby uczestniczyć w procesie o stary zamek, niegdyś własność bogatego magnata Stolnika Horeszki. 
+                    Proces toczy się między ostatnim krewnym Horeszki, Hrabią i Sędzią Soplicą.</p>
+                <p>Wieczorem Tadeusz bierze udział w uczcie, na której uwodzi go ciotka Telimena. Tadeusz myśli, że to ona jest śliczną dziewczyną, którą zaskoczył 
+                    rankiem (Zosia mieszkała w pokoju Tadeusza w czasie jego nieobecności w dworku). O wdzięki Zosi stara się także nieco starszy od Tadeusza 
+                    hrabia z rodu Horeszków. Następnego dnia okazuje się, że niedźwiedź opuścił matecznik i można na niego zapolować - wszystkich pochłaniają 
+                    przygotowania do łowów na króla puszczy. Polowanie rozpoczyna się wczesnym rankiem. Nieco później w karczmie Jankiela pojawia się ksiądz Robak, 
+                    który namawia okoliczną szlachtę, by zatroszczyła się o przygotowanie Litwy na przyjęcie wojsk Napoleona, który już się zbliża.</p>
+                <p>Myśliwi odnoszą sukces - niedźwiedź zostaje zabity. Wieczorem podczas kolejnej uczty wybucha spór między Soplicą a Hrabią. Zamiast ogólnie spodziewanej
+                     zgody, Hrabia zrywa porozumienie i postanawia przedłużyć proces i starać się o odzyskanie zrujnowanego zamku.</p>
+                <p>Agitacyjne działania Robaka wykorzystuje wierny sługa Horeszków - Gerwazy - który namawia zaścianek Dobrzyńskich do zajazdu na Soplicowo. Jeszcze tego 
+                    samego dnia wieczorem Dobrzyńscy napadają na Soplicowo. Już rankiem okazuje się jednak, że to nie oni zwyciężyli w walce. Ktoś zawiadomił o bitwie 
+                    stacjonujących w okolicy Rosjan, którzy pojmali szlachtę z Dobrzyna i rozpanoszyli się w Soplicowie. Na ratunek pospieszył Robak z przywódcą rodu 
+                    Dobrzyńskich, Maćkiem nad Maćkami. Udało im się wyzwolić Dobrzyńskich a następnie pokonano Rosjan. Jeszcze tego samego wieczora po odbyciu spowiedzi 
+                    i wyznaniu swoich win zmarł zraniony kulą w czasie bitwy z Rosjanami ksiądz Robak, który okazał się być Jackiem Soplicą.</p>
+                <p>Tymczasem młodzi żołnierze musieli uchodzić z majątku, bo groziło im aresztowanie. Byli wśród nich Tadeusz i Hrabia, którzy wyruszyli walczyć w 
+                    Legionach Polskich. Po upływie roku ponownie pojawili się w dworku, tym razem jako legioniści, bohaterowie. W Soplicowie wydano ucztę na cześć 
+                    polskich generałów służących pod dowództwem Napoleona. Odbyły się także zaręczyny Tadeusza i Zosi. Jacek Soplica został oficjalnie zrehabilitowany 
+                    (miał na Litwie opinię zdrajcy narodowego, ponieważ z jego ręki zginął Stolnik Horeszko, zwolennik Konstytucji 3 maja).</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<!-- Rule importance based on:
+1. Order of appearance (cascading order): last rule to appear in CSS has highest priority (overrides previous ones)
+2. style="..." lines are more important than internal and external stylesheets unless !important keyowrd is used
+3. Selector type - each selector has specific weight assigned (p < .someclass < #someid)
+4. !important keyword overides all existing rules no matter if there is something previously or after
+-->

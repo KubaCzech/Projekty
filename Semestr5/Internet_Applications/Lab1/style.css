@@ -1,0 +1,63 @@
+li { 
+    list-style-type: square 
+}
+
+* { 
+    font-family: Tahoma 
+}
+
+body { 
+    margin: 5em 10em 5em 10em 
+}
+
+p { 
+    text-align: justify 
+}
+
+#price {
+    color: red !important;
+    font-weight: bold;
+}
+
+#par1 {
+    font-style: italic;
+    color: green;
+}
+
+td > img{
+    border:2px solid blue;
+}
+
+td > img:hover {
+    border-color: red;
+}
+
+h1{
+    color:white
+}
+
+h1 + h2{
+    letter-spacing: 5px;
+    color: white
+}
+
+td[colspan="2"] > p {
+    font-size: small;
+}
+
+p ~ p {
+    color: grey;
+}
+
+body {
+    background-image: url(books.png); 
+    background-repeat: repeat-y
+}
+
+strong{
+    font-weight: bold;
+}
+
+.underlined{
+    text-decoration: underline;
+}
