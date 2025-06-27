@@ -1,0 +1,193 @@
+$default-font-size: 16px;
+$my-color-footer: #dfe4c9;
+$my-color-1: #2ed5ea;
+$my-color-2: #ff7f00;
+$my-color-3: #f4abad;
+$distances: 20px;
+$topbar-height: 100px;
+
+* {
+    font-size: $default-font-size;
+    font-family: 'Tahoma';
+    box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  min-height: 100vh;
+  // overflow: auto;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+}
+
+.topbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: $topbar-height;
+}
+
+.logo{
+  display: flex;
+  height: 100%;
+  margin-left: 25px;
+  margin-right: 5px;
+
+  img{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 30px;
+    width: $topbar-height - 30px;
+    height: $topbar-height - 30px;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    font-family: 'Garamond';
+    font-size: 2 * $default-font-size;
+    font-weight: normal;
+  
+  }
+}
+
+.button-menu{
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  margin-right: 30px;
+
+  a{
+    padding: 10px;
+    width: 70px;
+    text-align: center;
+    font-family: 'Garamond';
+  }
+
+  a:hover{
+    background-color: $my-color-footer;
+    color: white;
+    font-weight: bold;
+  }
+
+  img{
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 30px;
+    width: $topbar-height - 30px;
+    height: $topbar-height - 30px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: $distances;
+}
+
+@mixin text-box($color){
+  width: 150px;
+  height: 40px;
+  color: black;
+  background-color: $color;
+
+  font-weight: normal;
+  font-size: 1.5 * $default-font-size;
+
+  display: flex;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-top: auto;
+
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.Paragraph{
+  width: calc(33.33% - 2 * $distances);
+  margin: $distances;
+  color: black;
+  background-color: $my-color-footer;
+  border: 2px solid black;
+  p{
+    padding:10px;
+  }
+}
+
+.Lorem {
+    @extend .Paragraph;
+    h2{
+      @include text-box($my-color-1);
+    }
+  }
+  
+.Ipsum {
+    @extend .Paragraph;
+    h2 {
+      @include text-box($my-color-2);
+    }
+  }
+
+.Dolor{
+    @extend .Paragraph;
+    h2 {
+      @include text-box($my-color-3);
+    }
+  }
+
+@media only screen and (max-width: 1023px){
+  .Lorem {
+    width: 100%;
+  }
+  .Ipsum {
+    width: calc(50% - 2* $distances);
+  }
+  .Dolor {
+    width: calc(50% - 2 * $distances);
+  }
+  .button-menu > a{
+    display:none;
+  }
+  #menu{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 599px){
+  .Lorem{
+    width: 100%;
+  }
+  .Ipsum{
+    width: 100%;
+  }
+  .Dolor{
+    width: 100%;
+  }
+  .logo > h1{
+    display: none;
+  }
+}
+
+.footer {
+  height: 100px;
+  text-align: center;
+  margin-top: auto;
+
+  background-color: $my-color-footer;
+  color: black;
+  border-top: 3px solid black;
+  width: 100%;
+  padding: 10px;
+}
