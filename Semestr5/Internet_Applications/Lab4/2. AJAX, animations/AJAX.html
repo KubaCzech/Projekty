@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        a { margin: 10px; }
+        #content { border: 1px solid black; padding: 20px; width: 50%; }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            // $('a').click(function () {
+            //     // $('#content').load('AJAX' + $(this).attr('href'));
+
+            //     $('#content').fadeOut(); //stronka znika
+            //     $('#content').load('AJAX' + $(this).attr('href'));
+            //     $('#content').fadeIn(); //stronka pojawia sie
+
+            //     return false;
+            // });
+
+            //Q13: This approach allows us to synchronize execution of snippets (In previous example even though there is some order, 
+            //snippets are executed asynchronously - load, fade out, fade in; in this approach, all operations are executed one after another - 
+            //fade out, load, fade in
+            //Q13b: we assign this to thisA variable to ensure that this will refer to 'a' element when using 'this' inside a nested callback may produce some problem
+            // $('a').click(function () {
+            //     let thisA = $(this);
+            //     $('#content').fadeOut('medium', function () {
+            //         $('#content').load('AJAX' + thisA.attr('href'), function () {
+            //             $('#content').fadeIn();
+            //         });
+            //     });
+            //     return false;
+            // });
+
+            //Q14: we can use this and dont have to assign it to thisA because we are all the time in event handler function
+            $('a').click(function () {
+                $('#content').animate({height: '0px', width: '0px'}, () => {
+                    $('#content').load('AJAX' + $(this).attr('href'), () => {
+                        $('#content').animate({ height: '1000px', width: '500px'});
+                    });
+                });
+                return false; //this stops default behavior (navigating to URL of clicked page)
+            });
+        });
+    </script>
+</head>
+<body>
+    <header><nav>
+        <a href="Selectors.html">Page 1</a>
+        <a href="Styles.html">Page 2</a>
+        <a href="Events.html">Page 3</a>
+    </nav></header>
+    <div id="content"></div>
+</body>
+</html>

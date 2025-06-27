@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <style>
+        .asdf {background-color: cyan;}
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // alert('Did you know that you can copy this text using Ctrl + C shortcut? ');
+        });
+
+        $(function () {
+            $('button:contains(\'A\')').click(function () {
+                $('#classic').addClass('asdf');
+            });
+
+            $('button:contains(\'B\')').click(function () {
+                $('#classic').removeClass('asdf');
+            });
+
+            $('button:contains(\'C\')').click(function () {
+                $('#toggle').toggleClass('asdf');
+            });
+
+            $('tr:even').addClass('asdf');
+
+            $('ol li.a:not(:has(.b:has([href])))').css('color', 'red').css('font-weight', 'bold')
+            $('ol li.a:has(.b:has([href]))').css('color', 'green').css('font-weight', 'bold')
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tr><td>First</td></tr>
+        <tr><td>Second</td></tr>
+        <tr><td>Third</td></tr>
+        <tr><td>Fourth</td></tr>
+        <tr><td>Fifth</td></tr>
+        <tr><td>Sixth</td></tr>
+    </table>
+    My favourite cars
+    <ol>
+        <li class="a">
+            Ferrari
+            <ul>
+                <li class="b"><a href = "some URL"></a>La Ferrari</li>
+                <li>458 Italia</li>
+                <li class="b">F12 Berlinetta</li>
+            </ul>
+        </li>
+        <li class="a">
+            Mercedes
+            <ul>
+                <li>G63 Bi Turbo</li>
+                <li>S63 AMG</li>
+                <li>GLS</li>
+            </ul>
+        </li>
+        <li>
+            Porsche
+            <ul>
+                <li>GT3 Taycan Turbo S</li>
+                <li>Macan</li>
+                <li>911 Carera</li>
+            </ul>
+        </li>
+        <li class = "a">
+            Audi
+            <ul>
+                <li>SUVs
+                    <ul>
+                        <li>Q8</li>
+                        <li>e-tron Sportback</li>
+                    </ul>
+                <li>Sport cars
+                    <ul>
+                        <li>e-tron GT</li>
+                        <li>A7</li>
+                        <li>R8</li>
+                    </ul>
+                </li>
+        </li>
+    </ol>
+    <p class = "a">But the best car is Polonez Caro!</p>
+    <div><button>Text A</button><br>
+    <button>Text B</button><span id="classic">Adding/removing class</span></div><br>
+    <div><button>Text C</button><span id="toggle">Toggling class</span></div>
+</body>
+</html>

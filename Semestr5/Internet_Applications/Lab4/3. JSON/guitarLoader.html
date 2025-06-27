@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        a { margin: 10px; }
+        #content { border: 1px solid black; padding: 20px; width: 50%; }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#loadButton').click(function() {
+                $.getJSON('guitars.json', function(data) {
+                    var listItems = '';
+                    
+                    data.Guitars.Guitar.forEach(function(item) {
+                        listItems += '<li>' + item.Brand + ': ' + item.Model + '</li>';
+                    });
+
+                    $('#data-list').html(listItems);
+                }).fail(function() {
+                    alert('Failed to load data.');
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <button id = "loadButton">Load</button>
+    <ul id = "data-list"></ul>
+</body>
+</html>
