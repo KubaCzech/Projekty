@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <% if (cartItems.length === 0) { %>
+        <p>Your cart is empty.</p>
+    <% } else { %>
+        <ul>
+            <% cartItems.forEach(item => { %>
+                <li>
+                    <%= item.name %> - Quantity: <%= item.cartQuantity %>
+                    <form action="/remove-from-cart" method="POST">
+                        <input type="hidden" name="productId" value="<%= item.id %>">
+                        <button type="submit">Remove</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    <% } %>
+    <form action="/checkout" method="POST"><button type="submit">Checkout</button></form>
+    <form action="/cancel" method="POST"><button type="submit">Cancel</button></form>
+    <a href="/">Back to Products</a>
+</body>
+</html>
