@@ -1,0 +1,17 @@
+.err{
+    color: red;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.wrong{
+    border: 2px dotted red;
+}
