@@ -78,14 +78,15 @@ def solve_activity_selection(activities):
     return selected
 
 
-# Task 1:
-cities = [(0, 0), (1, 0), (10, 0), (11, 0)]
-print(solve_tsp_nearest_neighbor(cities))
+if __name__ == '__main__':
+    # TASK 1 - TSP using Greedy Algorithm
+    cities = [(0, 0), (1, 0), (10, 0), (11, 0)]
+    print(solve_tsp_nearest_neighbor(cities))
 
-# Task 2:
-items = [(50, 3), (40, 2), (70, 4), (80, 5), (10, 1)]
-print(greedy_knapsack(6, items))
+    # TASK 2 - Knapsack Problem using Greedy Algorithm
+    items = [(50, 3), (40, 2), (70, 4), (80, 5), (10, 1)]
+    print(greedy_knapsack(6, items))
 
-# Task 3:
-activities = [(12, 13), (12, 15), (13, 14), (14, 16)]
-print(f"Activities selected: {solve_activity_selection(activities)}")
+    # TASK 3 - Activities Selection Problem using Greedy Algorithm
+    activities = [(12, 13), (12, 15), (13, 14), (14, 16)]
+    print(f"Activities selected: {solve_activity_selection(activities)}")

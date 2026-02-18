@@ -298,31 +298,33 @@ class GeneticAlgorithmTSPSolver(GeneticAlgorithmBase):
         return abs(self.fitness(best_solution))
 
 
-numbers = [1, 2, 3, 4, 10]
-solver = GeneticAlgorithmSetPartitionSolver(numbers=numbers)
-print(f"Set {numbers} can be partitioned into two subsets: {solver.run()}")  # True
+if __name__ == '__main__':
+    # TASK 1 - Set Partition Problem using Genetic Algorithm
+    numbers = [1, 2, 3, 4, 10]
+    solver = GeneticAlgorithmSetPartitionSolver(numbers=numbers)
+    print(f"Set {numbers} can be partitioned into two subsets: {solver.run()}")  # True
 
-# TASK 2 - TESTING DIFFERENT SELECTION MECHANISMS
-# Random
-solver = GeneticAlgorithmSetPartitionSolver(selection_method=SelectionMethods.Random, numbers=numbers)
-print(f"Set {numbers} can be partitioned into two subsets: {solver.run()}")
+    # TASK 2 - Testing different selection mechanisms
+    # Random
+    solver = GeneticAlgorithmSetPartitionSolver(selection_method=SelectionMethods.Random, numbers=numbers)
+    print(f"Set {numbers} can be partitioned into two subsets: {solver.run()}")
 
-# Roulette
-solver = GeneticAlgorithmSetPartitionSolver(selection_method=SelectionMethods.Roulette, numbers=numbers)
-print(f"Set {numbers} can be partitioned into two subsets: {solver.run()}")
+    # Roulette
+    solver = GeneticAlgorithmSetPartitionSolver(selection_method=SelectionMethods.Roulette, numbers=numbers)
+    print(f"Set {numbers} can be partitioned into two subsets: {solver.run()}")
 
-# Elitism
-solver = GeneticAlgorithmSetPartitionSolver(selection_method=SelectionMethods.Elitism, numbers=numbers)
-print(f"Set {numbers} can be partitioned into two subsets: {solver.run()}")
+    # Elitism
+    solver = GeneticAlgorithmSetPartitionSolver(selection_method=SelectionMethods.Elitism, numbers=numbers)
+    print(f"Set {numbers} can be partitioned into two subsets: {solver.run()}")
 
-# TASK 3 - TSP
-cities = [
-    [0, 10, 20, 22.36, 14.14, 10],
-    [10, 0, 10, 14.14, 10, 14.14],
-    [20, 10, 0, 10, 14.14, 22.36],
-    [22.36, 14.14, 10, 0, 10, 20],
-    [14.14, 10, 14.14, 10, 0, 10],
-    [10, 14.14, 22.36, 20, 10, 0],
-]
-solver = GeneticAlgorithmTSPSolver(cities_matrix=cities)
-print(f"Minimal length of path found: {solver.run()}")  # Optimal = 60
+    # TASK 3 - TSP using Genetic Algorithm
+    cities = [
+        [0, 10, 20, 22.36, 14.14, 10],
+        [10, 0, 10, 14.14, 10, 14.14],
+        [20, 10, 0, 10, 14.14, 22.36],
+        [22.36, 14.14, 10, 0, 10, 20],
+        [14.14, 10, 14.14, 10, 0, 10],
+        [10, 14.14, 22.36, 20, 10, 0],
+    ]
+    solver = GeneticAlgorithmTSPSolver(cities_matrix=cities)
+    print(f"Minimal length of path found: {solver.run()}")  # Optimal = 60

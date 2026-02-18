@@ -89,10 +89,10 @@ def solve_set_partition(numbers: list[int]) -> bool:
 
 
 if __name__ == '__main__':
+    # TASK 1 - Knapsack Problem using Pseudopolynomial Algorithm
     n, capacity, items = read_data()
-    # 1. Solving knapsack problem
     print("Maximal value of knapsack:", solve_knapsack(n, capacity, items)[0])
 
-    # 2. Set partition problem
+    # TASK 2 - Set Partition using Pseudopolynomial Algorithm
     numbers = [1, 2, 3, 4, 5, 5]
     print(f"Set Partition of {[1, 2, 3, 4, 5, 5]} possible: {solve_set_partition(numbers)}")
